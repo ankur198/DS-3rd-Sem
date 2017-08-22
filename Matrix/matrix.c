@@ -120,7 +120,7 @@ void multiply()
 			}
 		}
 
-		printf("\Multiplication of two matrixes is:\n");
+		printf("\nMultiplication of two matrixes is:\n");
 		for (i = 0; i < dimension1[0]; i++)
 		{
 			for (j = 0; j < dimension2[1]; j++)
