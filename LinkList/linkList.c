@@ -12,6 +12,7 @@ struct Node
 struct Node *Head = NULL;
 struct Node *newNode;
 struct Node *ptr;
+struct Node *prev;
 
 void createNode()
 {
@@ -95,10 +96,63 @@ void insertAtLoc()
 void display()
 {
 	ptr = Head;
+	printf("Output: ");
 	while (ptr)
 	{
-		printf("\n%d", ptr->data);
+		printf("%d  ", ptr->data);
 		ptr = ptr->next;
+	}
+	printf("\n\n");
+}
+
+
+void deleteBegin() 
+{
+	ptr = Head;
+	Head = ptr->next;
+	free(ptr);
+}
+
+void deleteEnd()
+{
+	if (Head!=NULL)
+	{
+		ptr = Head;
+		prev = ptr;
+		while (ptr->next != NULL)
+		{
+			prev = ptr;
+			ptr = ptr->next;
+		}
+		prev->next = NULL;
+		free(ptr);
+	}
+}
+
+void deleteLoc()
+{
+	int position;
+	printf("\nEnter the position at which you want to delete the element: ");
+	scanf("%d", &position);
+	position--;
+	ptr = Head;
+	prev = ptr;
+	if (position==0)
+	{
+		Head = ptr->next;
+		free(ptr);
+		return;
+	}	
+	while (position!=0 && ptr->next!=NULL)
+	{
+		prev = ptr;
+		ptr = ptr->next;
+		position--;
+	}
+	if (position==0)
+	{
+		prev->next = ptr->next;
+		free(ptr);
 	}
 }
 
@@ -108,7 +162,8 @@ void main()
 	while (1)
 	{
 		system("cls");
-		printf("\n\n1.Insert node at begining\n2.At end\n3.At location\n4.Display\n5.Exit\n\nEnter a choice: ");
+		display();
+		printf("\n\n1.Insert node at begining\n2.At end\n3.At location\n4.Delete at start\n5.Delete at end\n6.Delete at location\n7.Exit\n\nChoice: ");
 		scanf("%d", &choice);
 		switch (choice)
 		{
@@ -122,10 +177,15 @@ void main()
 			insertAtLoc();
 			break;
 		case 4:
-			display();
-			getch();
+			deleteBegin();
 			break;
 		case 5:
+			deleteEnd();
+			break;
+		case 6:
+			deleteLoc();
+			break;
+		case 7:
 			exit(0);
 		default:
 			break;
