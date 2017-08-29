@@ -3,6 +3,13 @@
 #include<stdlib.h>
 #include<malloc.h>
 
+void insertAtBegin();
+void insertAtEnd();
+void insertAtLoc();
+void deleteBegin();
+void deleteEnd();
+void deleteLoc();
+
 struct Node
 {
 	int data;
@@ -12,7 +19,70 @@ struct Node
 struct Node *Head = NULL;
 struct Node *newNode;
 struct Node *ptr;
+struct Node *ptr1;
 struct Node *prev;
+
+void clrscr()
+{
+	system("cls");
+}
+
+void choice()
+{
+	int ch;
+	printf("\n\n1.Insert node at begining\n2.At end\n3.At location\n4.Delete at start\n5.Delete at end\n6.Delete at location\n7.Exit\n\nChoice: ");
+	scanf("%d", &ch);
+	switch (ch)
+	{
+	case 1:
+		insertAtBegin();
+		break;
+	case 2:
+		insertAtEnd();
+		break;
+	case 3:
+		insertAtLoc();
+		break;
+	case 4:
+		deleteBegin();
+		break;
+	case 5:
+		deleteEnd();
+		break;
+	case 6:
+		deleteLoc();
+		break;
+	case 7:
+		exit(0);
+	default:
+		choice();
+		break;
+	}
+}
+
+void display()
+{
+	ptr1 = Head;
+	printf("Output: ");
+	while (ptr1)
+	{
+		printf("%d  ", ptr1->data);
+		ptr1 = ptr1->next;
+	}
+	printf("\n\n");
+}
+
+void oldDisplay()
+{
+	ptr1 = Head;
+	printf("Old   : ");
+	while (ptr1)
+	{
+		printf("%d  ", ptr1->data);
+		ptr1 = ptr1->next;
+	}
+	printf("\n\n");
+}
 
 void createNode()
 {
@@ -31,6 +101,9 @@ void createNode()
 void insertAtBegin()
 {
 	createNode();
+	clrscr();
+	oldDisplay();
+
 	if (Head == NULL)
 	{
 		Head = newNode;
@@ -40,11 +113,18 @@ void insertAtBegin()
 		newNode->next = Head;
 		Head = newNode;
 	}
+
+	display();
+	choice();
 }
 
-void insetAtEnd()
+void insertAtEnd()
 {
 	createNode();
+
+	clrscr();
+	oldDisplay();
+
 	ptr = Head;
 	if (Head == NULL)
 	{
@@ -58,6 +138,9 @@ void insetAtEnd()
 		}
 		ptr->next = newNode;
 	}
+
+	display();
+	choice();
 }
 
 void insertAtLoc()
@@ -67,10 +150,12 @@ void insertAtLoc()
 	scanf("%d", &position);
 	position--;
 	ptr = Head;
+	clrscr();
+	oldDisplay();
 	if (Head != NULL)
 	{
 		ptr = Head;
-		while (ptr->next != NULL && position>0)
+		while (ptr->next != NULL && position > 0)
 		{
 			ptr = ptr->next;
 			position--;
@@ -78,45 +163,56 @@ void insertAtLoc()
 		if (!position)
 		{
 			createNode();
+
 			newNode->next = ptr->next;
 			ptr->next = newNode;
+
+			display();
+			choice();
 		}
 
 		else
 		{
+			display();
 			printf("Invalid position");
+			choice();
 		}
 	}
 	else
 	{
+		display();
 		printf("Invalid position");
+		choice();
 	}
 }
 
-void display()
+void deleteBegin()
 {
-	ptr = Head;
-	printf("Output: ");
-	while (ptr)
+	clrscr();
+	oldDisplay();
+	if (Head==NULL)
 	{
-		printf("%d  ", ptr->data);
-		ptr = ptr->next;
+		display();
+		printf(" There is no value");
+		choice();
+		return;
 	}
-	printf("\n\n");
-}
-
-
-void deleteBegin() 
-{
 	ptr = Head;
 	Head = ptr->next;
 	free(ptr);
+
+	display();
+	choice();
 }
 
 void deleteEnd()
 {
-	if (Head!=NULL)
+	if (Head != NULL)
 	{
+
+		clrscr();
+		oldDisplay();
+
 		ptr = Head;
 		prev = ptr;
 		while (ptr->next != NULL)
@@ -126,6 +222,17 @@ void deleteEnd()
 		}
 		prev->next = NULL;
 		free(ptr);
+
+		display();
+		choice();
+	}
+	else
+	{
+		clrscr();
+		oldDisplay();
+		display();
+		printf("No value");
+		choice();
 	}
 }
 
@@ -137,58 +244,64 @@ void deleteLoc()
 	position--;
 	ptr = Head;
 	prev = ptr;
-	if (position==0)
+	if (ptr==NULL)
 	{
-		Head = ptr->next;
-		free(ptr);
-		return;
-	}	
-	while (position!=0 && ptr->next!=NULL)
-	{
-		prev = ptr;
-		ptr = ptr->next;
-		position--;
+		clrscr();
+		oldDisplay();
+		display();
+		//choice();
+
+		printf("No value");
+
 	}
-	if (position==0)
+	else
 	{
-		prev->next = ptr->next;
-		free(ptr);
+		if (position == 0)
+		{
+			clrscr();
+			oldDisplay();
+
+			Head = ptr->next;
+			free(ptr);
+
+			display();
+
+			//return;
+		}
+		while (position != 0 && ptr->next != NULL)
+		{
+			prev = ptr;
+			ptr = ptr->next;
+			position--;
+		}
+		if (position == 0)
+		{
+			clrscr();
+			oldDisplay();
+
+			prev->next = ptr->next;
+			free(ptr);
+
+			display();
+			//choice();
+		}
+		else
+		{
+			clrscr();
+			oldDisplay();
+
+			display();
+
+			printf("No value");
+
+			//choice();
+		}
 	}
+	choice();
 }
 
 void main()
 {
-	int choice;
-	while (1)
-	{
-		system("cls");
-		display();
-		printf("\n\n1.Insert node at begining\n2.At end\n3.At location\n4.Delete at start\n5.Delete at end\n6.Delete at location\n7.Exit\n\nChoice: ");
-		scanf("%d", &choice);
-		switch (choice)
-		{
-		case 1:
-			insertAtBegin();
-			break;
-		case 2:
-			insetAtEnd();
-			break;
-		case 3:
-			insertAtLoc();
-			break;
-		case 4:
-			deleteBegin();
-			break;
-		case 5:
-			deleteEnd();
-			break;
-		case 6:
-			deleteLoc();
-			break;
-		case 7:
-			exit(0);
-		default:
-			break;
-		}
-	}
+	//clrscr();
+	choice();
 }
