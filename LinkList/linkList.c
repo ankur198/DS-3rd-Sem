@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
+
 #include<malloc.h>
 
 void insertAtBegin();
@@ -21,6 +22,27 @@ struct Node *newNode;
 struct Node *ptr;
 struct Node *ptr1;
 struct Node *prev;
+
+//this is in circular queue
+void insertEnd()
+{
+	if (Head==NULL)
+	{
+		newNode->next = Head;
+		Head = newNode;
+	}
+	else
+	{
+		ptr = Head;
+		while (ptr->next!=Head)
+		{
+			ptr = ptr->next;
+		}
+		ptr->next = newNode;
+		newNode->next = Head;
+	}
+}
+//end of circular queue
 
 void clrscr()
 {
