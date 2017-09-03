@@ -20,26 +20,26 @@ namespace booth_multiplication_c_sharp
 
         private static void boothMultiplication(int q, int m)
         {
-            char[] Q = Convert.ToString(q, 2).ToArray();
-            var M = Convert.ToString(m, 2).ToArray();
-            var MInv = Convert.ToString(-m, 2).ToArray();
-            int count = Q.Length;
-            char[] A = new char[Q.Length];
+            var Q = getBoolean(q);
+            var M = getBoolean(m);
+            var MInv = getBoolean(-m);
+            int count = Q.Count;
+            char[] A = new char[Q.Count];
             var Q1 = '0';
-            for (int i = 0; i < Q.Length; i++)
+            for (int i = 0; i < Q.Count; i++)
             {
                 A[i] = '0';
             }
             while (count != 0)
             {
-                
-                if (Q[Q.Length - 1] == Q1)
+                Display();
+                if (Q[Q.Count - 1] == Q1)
                 {
                     //right shift on bottom
                 }
                 else
                 {
-                    if (Q[Q.Length - 1] == 0)
+                    if (Q[Q.Count - 1] == 0)
                     {
                         //A=A-M
                         subM();
@@ -52,10 +52,20 @@ namespace booth_multiplication_c_sharp
                 }
                 rightShift();
                 count--;
-                Console.WriteLine("{0}\t{1}\t{2}\t{3}", count, A.ToString(), Convert.ToString(Q), Q1);
-                void Display();
+                //Console.WriteLine("{0}\t{1}\t{2}\t{3}", count, A.ToString(), Convert.ToString(Q), Q1);
             }
-
+            Display();
+            List<char> getBoolean(int a)
+            {
+                char[] x = Convert.ToString(a, 2).ToArray();
+                List<char> boolean = new List<char>();
+                boolean.Add(x[0]);
+                foreach (var item in x)
+                {
+                    boolean.Add(item);
+                }
+                return boolean;
+            }
             void rightShift()
             {
                 char temp = A[0];
@@ -72,7 +82,7 @@ namespace booth_multiplication_c_sharp
                     prev = temp;
                 }
 
-                for (int i = 0; i < Q.Length; i++)
+                for (int i = 0; i < Q.Count; i++)
                 {
                     temp = Q[i];
                     Q[i] = prev;
@@ -100,6 +110,7 @@ namespace booth_multiplication_c_sharp
                     {
                         total1++;
                     }
+                    carry1 = '0';
 
 
                     if (total1 == 1)
@@ -116,11 +127,10 @@ namespace booth_multiplication_c_sharp
                         A[i] = '1';
                         carry1 = '1';
                     }
-                    carry1 = carry2;
-                    carry2 = '0';
+                    //carry1 = carry2;
+                    //carry2 = '0';
                 }
             }
-
             void subM()
             {
                 char carry1 = '0';
@@ -141,6 +151,7 @@ namespace booth_multiplication_c_sharp
                     {
                         total1++;
                     }
+                    carry1 = '0';
 
 
                     if (total1 == 1)
@@ -157,9 +168,23 @@ namespace booth_multiplication_c_sharp
                         A[i] = '1';
                         carry1 = '1';
                     }
-                    carry1 = carry2;
-                    carry2 = '0';
+                    //carry1 = carry2;
+                    //carry2 = '0';
                 }
+            }
+            void Display()
+            {
+                Console.Write(count + "\t");
+                for (int i = 0; i < A.Length; i++)
+                {
+                    Console.Write(A[i]);
+                }
+                Console.Write("\t");
+                for (int i = 0; i < Q.Count; i++)
+                {
+                    Console.Write(Q[i]);
+                }
+                Console.WriteLine("\t{0}", Q1);
             }
         }
     }
