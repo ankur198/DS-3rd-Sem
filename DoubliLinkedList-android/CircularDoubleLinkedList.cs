@@ -158,27 +158,41 @@ namespace DoubliLinkedList_android
 
         public int DeleteAtBegin()
         {
-            var tlist = new List<int>();
-            var pop = doubleList[0];
-            for (int i = 1; i < doubleList.Count; i++)
+            if (doubleList.Count>0)
             {
-                tlist.Add(doubleList[i]);
+                var tlist = new List<int>();
+                var pop = doubleList[0];
+                for (int i = 1; i < doubleList.Count; i++)
+                {
+                    tlist.Add(doubleList[i]);
+                }
+
+                doubleList.Clear();
+
+                for (int i = 0; i < tlist.Count; i++)
+                {
+                    doubleList.Add(tlist[i]);
+                }
+                return pop; 
             }
-
-            doubleList.Clear();
-
-            for (int i = 0; i < tlist.Count; i++)
+            else
             {
-                doubleList.Add(tlist[i]);
+                return -1;
             }
-            return pop;
         }
 
         public int DeleteAtEnd()
         {
-            var value = doubleList[doubleList.Count - 1];
-            doubleList.RemoveAt(doubleList.Count - 1);
-            return value;
+            if (doubleList.Count>0)
+            {
+                var value = doubleList[doubleList.Count - 1];
+                doubleList.RemoveAt(doubleList.Count - 1);
+                return value; 
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         public int[] display()
