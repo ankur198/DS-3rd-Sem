@@ -74,25 +74,31 @@ void insertAtLoc()
 	//createNode();
 	printf("\nEnter location at which you want to insert: ");
 	scanf("%d", &n);
-	n--;
-	if (n == 0)
+	//n--;
+	if (n == 1)
 	{
 		insertAtBegin();
 	}
-	else if(n>0)
+	else if(n>1)
 	{
 		n--;
 		ptr = Head;
-		while (ptr->Next!=Head && n>0)
+		while (ptr->Next!=Head && n>1)
 		{
 			ptr = ptr->Next;
 			n--;
 		}
-		if (n==0)
+		if (n==1)
 		{
 			createNode();
 			newNode->Next = ptr->Next;
 			ptr->Next = newNode;
+		}
+		else if (n==2)
+		{
+			createnode();
+			ptr->Next = newNode;
+			newNode->Next = head;
 		}
 		else
 		{
@@ -160,23 +166,23 @@ void deleteAtLoc()
 	int n;
 	printf("\n\nEnter the position at which you want to delete: ");
 	scanf("%d", &n);
-	n--;
-	if (n==0)
+	//n--;
+	if (n==1)
 	{
 		deleteAtBegin();
 	}
-	else if(n>0)
+	else if(n>1)
 	{
 		//n--;
 		ptr = Head;
 		prev = ptr;
-		while (ptr->Next != Head && n > 0)
+		while (ptr->Next != Head && n > 1)
 		{
 			prev = ptr;
 			ptr = ptr->Next;
 			n--;
 		}
-		if (n==0)
+		if (n==1)
 		{
 			if (ptr->Next == Head)
 			{
