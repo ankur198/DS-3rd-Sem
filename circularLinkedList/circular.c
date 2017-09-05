@@ -98,7 +98,7 @@ void insertAtLoc()
 		{
 			createnode();
 			ptr->Next = newNode;
-			newNode->Next = head;
+			newNode->Next = Head;
 		}
 		else
 		{

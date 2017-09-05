@@ -23,26 +23,7 @@ struct Node *ptr;
 struct Node *ptr1;
 struct Node *prev;
 
-//this is in circular queue
-void insertEnd()
-{
-	if (Head==NULL)
-	{
-		newNode->next = Head;
-		Head = newNode;
-	}
-	else
-	{
-		ptr = Head;
-		while (ptr->next!=Head)
-		{
-			ptr = ptr->next;
-		}
-		ptr->next = newNode;
-		newNode->next = Head;
-	}
-}
-//end of circular queue
+
 
 void clrscr()
 {
@@ -86,7 +67,7 @@ void display()
 {
 	ptr1 = Head;
 	printf("Output: ");
-	while (ptr1)
+	while (ptr1!=NULL)
 	{
 		printf("%d  ", ptr1->data);
 		ptr1 = ptr1->next;
@@ -109,6 +90,8 @@ void oldDisplay()
 void createNode()
 {
 	int d;
+
+	printf("refrf");
 	//struct Node node;
 	newNode = (struct Node*)malloc(sizeof(struct Node));
 	printf("\nEnter data: ");
