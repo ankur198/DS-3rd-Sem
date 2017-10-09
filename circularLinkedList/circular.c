@@ -96,7 +96,7 @@ void insertAtLoc()
 		}
 		else if (n==2)
 		{
-			createnode();
+			createNode();
 			ptr->Next = newNode;
 			newNode->Next = Head;
 		}
