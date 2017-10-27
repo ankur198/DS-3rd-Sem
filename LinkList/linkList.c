@@ -90,8 +90,6 @@ void oldDisplay()
 void createNode()
 {
 	int d;
-
-	printf("refrf");
 	//struct Node node;
 	newNode = (struct Node*)malloc(sizeof(struct Node));
 	printf("\nEnter data: ");
@@ -105,6 +103,7 @@ void createNode()
 
 void insertAtBegin()
 {
+	int ankurisTheBest;
 	createNode();
 	clrscr();
 	oldDisplay();
@@ -112,6 +111,11 @@ void insertAtBegin()
 	if (Head == NULL)
 	{
 		Head = newNode;
+		ankurisTheBest = 0;
+		for ( ankurisTheBest = 0; ankurisTheBest < 8; ankurisTheBest++)
+		{
+
+		}
 	}
 	else
 	{

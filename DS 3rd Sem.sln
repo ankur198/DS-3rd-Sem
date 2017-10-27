@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stack", "Stack\Stack.vcxproj", "{1655A127-9839-4344-BBC9-C1CE63F9B36D}"
 EndProject
@@ -17,7 +17,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-TowerOfHanio", "To
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-MatrixAddMul", "MatrixAddMul\MatrixAddMul.vcxproj", "{786BE033-40BC-4637-9BA8-AC400E7F4D6C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Factorial", "Factorial\Factorial.vcxproj", "{72351B6A-521B-4904-9A34-312DEC715E04}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-factorial", "Factorial\Factorial.vcxproj", "{72351B6A-521B-4904-9A34-312DEC715E04}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixTransform", "MatrixTransform\MatrixTransform.vcxproj", "{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,16 @@ Global
 		{72351B6A-521B-4904-9A34-312DEC715E04}.Release|x64.Build.0 = Release|x64
 		{72351B6A-521B-4904-9A34-312DEC715E04}.Release|x86.ActiveCfg = Release|Win32
 		{72351B6A-521B-4904-9A34-312DEC715E04}.Release|x86.Build.0 = Release|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Debug|x64.ActiveCfg = Debug|x64
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Debug|x64.Build.0 = Debug|x64
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Debug|x86.ActiveCfg = Debug|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Debug|x86.Build.0 = Debug|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Release|x64.ActiveCfg = Release|x64
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Release|x64.Build.0 = Release|x64
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Release|x86.ActiveCfg = Release|Win32
+		{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
