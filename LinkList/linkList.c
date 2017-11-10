@@ -111,11 +111,6 @@ void insertAtBegin()
 	if (Head == NULL)
 	{
 		Head = newNode;
-		ankurisTheBest = 0;
-		for ( ankurisTheBest = 0; ankurisTheBest < 8; ankurisTheBest++)
-		{
-
-		}
 	}
 	else
 	{
