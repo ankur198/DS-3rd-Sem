@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<malloc.h>
 
-int maxItem,i,top=0;
+int maxItem, i, front = 0, rear = 0;
 int *array;
 
 void createArray()
@@ -22,7 +22,7 @@ void initVal()
 void printVal()
 {
 	printf("Values are:\n");
-	for (i = top - 1; i >= 0; i--)
+	for (i = front; i < rear; i++)
 	{
 		printf("%d\t", array[i]);
 	}
@@ -30,43 +30,51 @@ void printVal()
 
 void push()
 {
-	if (top < maxItem)
+	if (rear<maxItem)
 	{
-		printf("Enter element:");
+		printf("Enter value:");
 		scanf("%d", &i);
-
-		array[top] = i;
-		top++;
+		array[rear] = i;
+		rear++;
 	}
 	else
 	{
-		printf("\nCant push");
+		printf("\nCant insert item");
 		getch();
 	}
 }
 
 void pop()
 {
-	if (top > 0)
+	if (front!=rear)
 	{
-		i = array[top-1];
-		top--;
-		printf("Deleted element: %d\n", i);
-		getch();
+		printf("\nDeleted element: %d", array[front]);
+		front++;
 	}
 	else
 	{
-		printf("\nCant perform");
-		getch();
+		printf("Cant delete element");
 	}
+	if (front==rear)
+	{
+		front = rear = 0;
+	}
+	getch();
 }
 
 void peek()
 {
-	i = array[top-1];
-	printf("Peek element: %d\n", i);
+	if (front != rear)
+	{
+		printf("\nPeek element: %d", array[front]);
+	}
+	else
+	{
+		printf("\nNo element");
+	}
 	getch();
 }
+
 
 void main()
 {
@@ -74,7 +82,7 @@ void main()
 	scanf("%d", &maxItem);
 	createArray();
 	initVal();
-	
+
 	while (1)
 	{
 		printVal();

@@ -23,7 +23,7 @@
     <ProjectGuid>{FAC6BE20-3B5E-4723-BE15-B3C6DC869AAF}</ProjectGuid>
     <RootNamespace>ArrayStack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>complete-ArrayStack</ProjectName>
+    <ProjectName>3 complete-ArrayStack</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
