@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<malloc.h>
 
-int maxItem, i, front = 0, rear = 0;
+int maxItem, i, front = -1, rear = 0;
 int *array;
 
 void createArray()
@@ -19,23 +19,57 @@ void initVal()
 	}
 }
 
+void print(int i)
+{
+	printf("%d\t", array[i]);
+}
+
 void printVal()
 {
-	printf("Values are:\n");
-	for (i = front; i < rear; i++)
+	printf("Raw Values are:\n");
+	for (i = 0; i < maxItem; i++)
 	{
-		printf("%d\t", array[i]);
+		print(i);
 	}
+
+	printf("\n\nFormatted Values are:\n");
+	if (front > -1)
+	{
+		for (i = front; i < rear; i++)
+		{
+			print(i);
+		}
+		if (front >= rear)
+		{
+			for (i = front; i < maxItem; i++)
+			{
+				print(i);
+			}
+			for (i = 0; i < rear; i++)
+			{
+				print(i);
+			}
+		}
+	}
+	printf("\n\nFront: %d\nRear: %d", front, rear);
 }
 
 void push()
 {
-	if (rear < maxItem)
+	if (rear != front)
 	{
 		printf("Enter value:");
 		scanf("%d", &i);
 		array[rear] = i;
 		rear++;
+		if (rear == maxItem)
+		{
+			rear = 0;
+		}
+		if (front == -1)
+		{
+			front++;
+		}
 	}
 	else
 	{
@@ -46,10 +80,14 @@ void push()
 
 void pop()
 {
-	if (front != rear)
+	if (front != -1)
 	{
 		printf("\nDeleted element: %d", array[front]);
 		front++;
+		if (front == maxItem)
+		{
+			front = 0;
+		}
 	}
 	else
 	{
@@ -57,14 +95,15 @@ void pop()
 	}
 	if (front == rear)
 	{
-		front = rear = 0;
+		front = -1;
+		rear = 0;
 	}
 	getch();
 }
 
 void peek()
 {
-	if (front != rear)
+	if (front != -1)
 	{
 		printf("\nPeek element: %d", array[front]);
 	}

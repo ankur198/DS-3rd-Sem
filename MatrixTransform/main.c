@@ -39,9 +39,9 @@ void printMat()
 {
 	int i, j;
 	printf("\n\nInput:\n");
-	for ( i = 0; i < dimensions[0]; i++)
+	for (i = 0; i < dimensions[0]; i++)
 	{
-		for ( j = 0; j < dimensions[1]; j++)
+		for (j = 0; j < dimensions[1]; j++)
 		{
 			printf("%d\t", Mat[i][j]);
 		}
