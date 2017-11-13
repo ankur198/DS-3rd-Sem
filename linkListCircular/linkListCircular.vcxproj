@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{D510F4D2-4FC9-4182-AADD-7997F2B7CA6B}</ProjectGuid>
-    <RootNamespace>linklistStack</RootNamespace>
+    <ProjectGuid>{1DDF8605-80CD-4779-A3C6-C05803009D63}</ProjectGuid>
+    <RootNamespace>linkListCircular</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>6 complete-linklistStack</ProjectName>
+    <ProjectName>8 complete-linkListCircular</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -112,7 +112,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="linklistStack.c" />
+    <ClCompile Include="linkListCQueue.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

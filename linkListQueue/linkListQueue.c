@@ -6,17 +6,24 @@
 struct Node
 {
 	int data;
-	struct Node *previous;
+	struct Node *next;
 };
 
 int i;
-struct Node *top = NULL, *newNode;
+struct Node *front = NULL, *rear = NULL, *newNode;
 struct Node *ptr;
 
-void setPointerToPreviousNode()
+void setPointerToNextNode()
 {
-	newNode->previous = top;
-	top = newNode;
+	if (front)
+	{
+		rear->next = newNode;
+	}
+	else
+	{
+		front = newNode;
+	}
+	rear = newNode;
 }
 
 void createNode()
@@ -25,19 +32,19 @@ void createNode()
 	printf("\nEnter element: ");
 	scanf("%d", &i);
 	newNode->data = i;
-	newNode->previous = NULL;
-	
-	setPointerToPreviousNode();
+	newNode->next = NULL;
+
+	setPointerToNextNode();
 }
 
 void print()
 {
-	ptr = top;
+	ptr = front;
 	printf("\n\n");
 	while (ptr)
 	{
 		printf("%d\t", ptr->data);
-		ptr = ptr->previous;
+		ptr = ptr->next;
 	}
 	printf("\n\n");
 }
@@ -49,11 +56,11 @@ void push()
 
 void pop()
 {
-	if (top)
+	if (front)
 	{
-		printf("Deleted element is: %d", top->data);
-		ptr = top;
-		top = top->previous;
+		printf("Deleted element is: %d", front->data);
+		ptr = front;
+		front = front->next;
 		free(ptr);
 	}
 	else
@@ -65,9 +72,9 @@ void pop()
 
 void peek()
 {
-	if (top)
+	if (front)
 	{
-		printf("Peek element is: %d", top->data);
+		printf("Peek element is: %d", front->data);
 	}
 	else
 	{
