@@ -5,7 +5,7 @@
 
 int **adjMat; //adjecency matrix
 int verticesMax, edgesMax;
-int *queue, front, rear;
+int *stack, top, rear;
 int *result;
 int i, j;
 
@@ -83,16 +83,16 @@ void inputEdges()
 	}
 }
 
-void createQueue()
+void createStack()
 {
-	queue = (int *)malloc(sizeof(int)*verticesMax - 1);
-	front = -1;
+	stack = (int *)malloc(sizeof(int)*verticesMax - 1);
+	top = -1;
 	rear = 0;
 }
 
 void printQueue()
 {
-	if (front != -1)
+	if (top != -1)
 	{
 		for (i = 0; i <= rear; i++)
 		{
@@ -104,31 +104,34 @@ void printQueue()
 
 void push(int data)
 {
-	if (front != -1)
+	/*if (top != -1)
 	{
 		rear++;
 	}
 	else
 	{
-		front++;
+		top++;
 		rear = 0;
 	}
-	queue[rear] = data;
+	stack[rear] = data;*/
+
+	top++;
+	stack[top] = data;
 	printQueue();
 }
 
 int pop()
 {
 	int d;
-	if (front != -1)
+	if (top != -1)
 	{
-		d = queue[front];
-		front++;
-		if (front > rear)
+		d = stack[top];
+		top--;
+		/*if (top > rear)
 		{
-			front = -1;
+			top = -1;
 			rear = 0;
-		}
+		}*/
 		printQueue();
 		return d;
 	}
@@ -139,7 +142,7 @@ int pop()
 	}
 }
 
-void bfs()
+void dfs()
 {
 	int edge = 0, vertex = 0, checkVertex = 0;
 	int completed = 0;
@@ -163,11 +166,9 @@ void bfs()
 						{
 							continue;
 						}
-						if ((adjMat[vertex][edge] == 1) && vertices[vertex].visited==0)
+						if ((adjMat[vertex][edge] == 1) && vertices[vertex].visited == 0)
 						{
 							vertices[vertex].visited = 1;
-							/*completed++;
-							result[completed] = vertex;*/
 							push(vertex);
 							break;
 						}
@@ -196,7 +197,7 @@ void main()
 	getEdges();
 	createAdjMatrix();
 	inputEdges();
-	createQueue();
-	bfs();
+	createStack();
+	dfs();
 	getch();
 }

@@ -78,7 +78,7 @@ void main()
 	while (1)
 	{
 		printVal();
-		printf("\n\n\n\n1.Push\n2.Pop\n3.Peek\n4.Exit\n\nChoice: ");
+		printf("\n\n\n\n\t1.Push\n\t2.Pop\n\t3.Peek\n\t4.Exit\n\t\n\tChoice: ");
 		scanf("%d", &i);
 
 		switch (i)
