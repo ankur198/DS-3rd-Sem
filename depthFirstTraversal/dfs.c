@@ -85,7 +85,7 @@ void inputEdges()
 
 void createStack()
 {
-	stack = (int *)malloc(sizeof(int)*verticesMax - 1);
+	stack = (int *)malloc(sizeof(int)*(verticesMax - 1));
 	top = -1;
 	rear = 0;
 }
@@ -147,6 +147,10 @@ void dfs()
 	int edge = 0, vertex = 0, checkVertex = 0;
 	int completed = 0;
 	result = (int *)malloc(sizeof(int)*verticesMax);
+	for (i = 0; i < verticesMax; i++)
+	{
+		result[i] = -1;
+	}
 	push(0);
 
 	while (1)
@@ -169,6 +173,8 @@ void dfs()
 						if ((adjMat[vertex][edge] == 1) && vertices[vertex].visited == 0)
 						{
 							vertices[vertex].visited = 1;
+							/*completed++;
+							result[completed] = vertex;*/
 							push(vertex);
 							break;
 						}
@@ -186,7 +192,14 @@ void dfs()
 	printf("\n\nAns is: ");
 	for (i = 0; i < verticesMax; i++)
 	{
-		printf("%c\t", vertices[result[i]].label);
+		if (result[i] != -1)
+		{
+			printf("%c\t", vertices[result[i]].label);
+		}
+		else
+		{
+			break;
+		}
 	}
 	printf("\n");
 }

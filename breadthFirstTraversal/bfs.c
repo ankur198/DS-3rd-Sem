@@ -56,21 +56,36 @@ void createAdjMatrix()
 	}
 }
 
+void printAdjMat()
+{
+	system("cls");
+	for (i = 0; i < verticesMax; i++)
+	{
+		for (j = 0; j < edgesMax; j++)
+		{
+			printf("%d\t", adjMat[i][j]);
+		}
+		printf("\n");
+	}
+}
+
 void inputEdges()
 {
 	int first, second;
 	for (i = 0; i < edgesMax; i++)
 	{
-		system("cls");
+		//system("cls");
 		for (j = 0; j < verticesMax; j++)
 		{
 			printf("%d\t", j);
-		}
+		} 
+		///index print
 		printf("\n");
 		for (j = 0; j < verticesMax; j++)
 		{
 			printf("%c\t", vertices[j].label);
 		}
+		//namee print
 
 		printf("\n\nEnter two vertices between you want to add edge");
 		printf("\nFirst: ");
@@ -81,11 +96,14 @@ void inputEdges()
 		adjMat[first][i] = 1;
 		adjMat[second][i] = 1;
 	}
+	printAdjMat();
 }
+
+
 
 void createQueue()
 {
-	queue = (int *)malloc(sizeof(int)*verticesMax - 1);
+	queue = (int *)malloc(sizeof(int)*(verticesMax - 1));
 	front = -1;
 	rear = 0;
 }
@@ -144,6 +162,10 @@ void bfs()
 	int edge = 0, vertex = 0, checkVertex = 0;
 	int completed = 0;
 	result = (int *)malloc(sizeof(int)*verticesMax);
+	for ( i = 0; i < verticesMax; i++)
+	{
+		result[i] = -1;
+	}
 	push(0);
 
 	while (1)
@@ -185,8 +207,15 @@ void bfs()
 	printf("\n\nAns is: ");
 	for (i = 0; i < verticesMax; i++)
 	{
-		printf("%c\t", vertices[result[i]].label);
-	}
+		if (result[i]!=-1)
+		{
+			printf("%c\t", vertices[result[i]].label);
+		}
+		else
+		{
+			break;
+		}
+	} 
 	printf("\n");
 }
 
@@ -198,5 +227,6 @@ void main()
 	inputEdges();
 	createQueue();
 	bfs();
-	getch();
+	_getch();
+	//getch();
 }
