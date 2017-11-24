@@ -23,7 +23,7 @@
     <ProjectGuid>{3E13AEA1-4580-47E8-B253-6C6DA6191247}</ProjectGuid>
     <RootNamespace>binaryTree</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>9 complete-binaryTree</ProjectName>
+    <ProjectName>09 complete-binaryTree</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

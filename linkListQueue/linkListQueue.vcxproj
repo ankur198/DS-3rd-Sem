@@ -23,7 +23,7 @@
     <ProjectGuid>{8C930CCB-AFE1-4386-B0DF-47C44AA15BA6}</ProjectGuid>
     <RootNamespace>linkListQueue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>7 complete-linkListQueue</ProjectName>
+    <ProjectName>07 complete-linkListQueue</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

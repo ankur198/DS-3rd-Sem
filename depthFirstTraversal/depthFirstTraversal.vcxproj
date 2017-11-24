@@ -23,7 +23,7 @@
     <ProjectGuid>{7EA4B137-669D-4CC5-B361-465393CE5C98}</ProjectGuid>
     <RootNamespace>depthFirstTraversal</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>913 complete-depthFirstTraversal</ProjectName>
+    <ProjectName>13 complete-depthFirstTraversal</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

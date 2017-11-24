@@ -23,7 +23,7 @@
     <ProjectGuid>{3402F3B6-E278-46FA-A059-05A77E8D6F5F}</ProjectGuid>
     <RootNamespace>ArrayQueue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>4 complete-ArrayQueue</ProjectName>
+    <ProjectName>04 complete-ArrayQueue</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
