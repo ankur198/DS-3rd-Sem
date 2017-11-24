@@ -3,45 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stack", "Stack\Stack.vcxproj", "{1655A127-9839-4344-BBC9-C1CE63F9B36D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-LinkList", "LinkList\LinkList.vcxproj", "{1C8C795A-2D9D-4990-9882-88671CD1F494}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-circularLinkedList", "circularLinkedList\circularLinkedList.vcxproj", "{D2B729F8-EB59-48C2-A6DC-34954B7FEA91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubliLinkedList-android", "DoubliLinkedList-android\DoubliLinkedList-android.csproj", "{E07E0E06-FEC9-4F92-8575-FBCF88C07DF7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoubleLinkedList", "DoubleLinkedList\DoubleLinkedList.vcxproj", "{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-TowerOfHanio", "TowerOfHanio\TowerOfHanio.vcxproj", "{B5751324-001D-442E-80CD-751B70BA7FE6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1 complete-MatrixAddMul", "MatrixAddMul\MatrixAddMul.vcxproj", "{786BE033-40BC-4637-9BA8-AC400E7F4D6C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01 complete-MatrixAddMul", "MatrixAddMul\MatrixAddMul.vcxproj", "{786BE033-40BC-4637-9BA8-AC400E7F4D6C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complete-factorial", "Factorial\Factorial.vcxproj", "{72351B6A-521B-4904-9A34-312DEC715E04}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2 complete-MatrixTransform", "MatrixTransform\MatrixTransform.vcxproj", "{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02 complete-MatrixTransform", "MatrixTransform\MatrixTransform.vcxproj", "{79ABCB62-DE19-4AEC-BD1A-0FFD9C05223F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3 complete-ArrayStack", "ArrayStack\ArrayStack.vcxproj", "{FAC6BE20-3B5E-4723-BE15-B3C6DC869AAF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03 complete-ArrayStack", "ArrayStack\ArrayStack.vcxproj", "{FAC6BE20-3B5E-4723-BE15-B3C6DC869AAF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4 complete-ArrayQueue", "ArrayQueue\ArrayQueue.vcxproj", "{3402F3B6-E278-46FA-A059-05A77E8D6F5F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 complete-ArrayQueue", "ArrayQueue\ArrayQueue.vcxproj", "{3402F3B6-E278-46FA-A059-05A77E8D6F5F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5 complete-ArrayCircualarQueue", "ArrayCircualarQueue\ArrayCircualarQueue.vcxproj", "{3C398194-6449-4175-84B0-71EDE8C032E9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05 complete-ArrayCircualarQueue", "ArrayCircualarQueue\ArrayCircualarQueue.vcxproj", "{3C398194-6449-4175-84B0-71EDE8C032E9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6 complete-linklistStack", "linklistStack\linklistStack.vcxproj", "{D510F4D2-4FC9-4182-AADD-7997F2B7CA6B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06 complete-linklistStack", "linklistStack\linklistStack.vcxproj", "{D510F4D2-4FC9-4182-AADD-7997F2B7CA6B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7 complete-linkListQueue", "linkListQueue\linkListQueue.vcxproj", "{8C930CCB-AFE1-4386-B0DF-47C44AA15BA6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07 complete-linkListQueue", "linkListQueue\linkListQueue.vcxproj", "{8C930CCB-AFE1-4386-B0DF-47C44AA15BA6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8 complete-linkListCircular", "linkListCircular\linkListCircular.vcxproj", "{1DDF8605-80CD-4779-A3C6-C05803009D63}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08 complete-linkListCircular", "linkListCircular\linkListCircular.vcxproj", "{1DDF8605-80CD-4779-A3C6-C05803009D63}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9 complete-binaryTree", "binaryTree\binaryTree.vcxproj", "{3E13AEA1-4580-47E8-B253-6C6DA6191247}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09 complete-binaryTree", "binaryTree\binaryTree.vcxproj", "{3E13AEA1-4580-47E8-B253-6C6DA6191247}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "912 complete-breadthFirstTraversal", "breadthFirstTraversal\breadthFirstTraversal.vcxproj", "{1A85DF8E-F381-4A0B-8510-C65062F8991F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12 complete-breadthFirstTraversal", "breadthFirstTraversal\breadthFirstTraversal.vcxproj", "{1A85DF8E-F381-4A0B-8510-C65062F8991F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "913 complete-depthFirstTraversal", "depthFirstTraversal\depthFirstTraversal.vcxproj", "{7EA4B137-669D-4CC5-B361-465393CE5C98}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13 complete-depthFirstTraversal", "depthFirstTraversal\depthFirstTraversal.vcxproj", "{7EA4B137-669D-4CC5-B361-465393CE5C98}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "910 complete-binarySearchTree", "binarySearchTree\binarySearchTree.vcxproj", "{634B87F8-61D7-4201-AACA-00849FDECD20}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10 complete-binarySearchTree", "binarySearchTree\binarySearchTree.vcxproj", "{634B87F8-61D7-4201-AACA-00849FDECD20}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "treeTraversal", "treeTraversal\treeTraversal.vcxproj", "{AB0E184F-1AFF-4F01-9399-D6497D2CE229}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11 complete-treeTraversal", "treeTraversal\treeTraversal.vcxproj", "{AB0E184F-1AFF-4F01-9399-D6497D2CE229}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,16 +49,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Debug|x64.ActiveCfg = Debug|x64
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Debug|x64.Build.0 = Debug|x64
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Debug|x86.ActiveCfg = Debug|Win32
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Debug|x86.Build.0 = Debug|Win32
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Release|Any CPU.ActiveCfg = Release|Win32
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Release|x64.ActiveCfg = Release|x64
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Release|x64.Build.0 = Release|x64
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Release|x86.ActiveCfg = Release|Win32
-		{1655A127-9839-4344-BBC9-C1CE63F9B36D}.Release|x86.Build.0 = Release|Win32
 		{1C8C795A-2D9D-4990-9882-88671CD1F494}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{1C8C795A-2D9D-4990-9882-88671CD1F494}.Debug|x64.ActiveCfg = Debug|x64
 		{1C8C795A-2D9D-4990-9882-88671CD1F494}.Debug|x64.Build.0 = Debug|x64
@@ -101,16 +87,6 @@ Global
 		{E07E0E06-FEC9-4F92-8575-FBCF88C07DF7}.Release|x86.ActiveCfg = Release|Any CPU
 		{E07E0E06-FEC9-4F92-8575-FBCF88C07DF7}.Release|x86.Build.0 = Release|Any CPU
 		{E07E0E06-FEC9-4F92-8575-FBCF88C07DF7}.Release|x86.Deploy.0 = Release|Any CPU
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Debug|x64.ActiveCfg = Debug|x64
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Debug|x64.Build.0 = Debug|x64
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Debug|x86.ActiveCfg = Debug|Win32
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Debug|x86.Build.0 = Debug|Win32
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Release|Any CPU.ActiveCfg = Release|Win32
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Release|x64.ActiveCfg = Release|x64
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Release|x64.Build.0 = Release|x64
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Release|x86.ActiveCfg = Release|Win32
-		{D6DE5EF7-8DB1-422E-97D3-CF611CE630A5}.Release|x86.Build.0 = Release|Win32
 		{B5751324-001D-442E-80CD-751B70BA7FE6}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{B5751324-001D-442E-80CD-751B70BA7FE6}.Debug|x64.ActiveCfg = Debug|x64
 		{B5751324-001D-442E-80CD-751B70BA7FE6}.Debug|x64.Build.0 = Debug|x64
